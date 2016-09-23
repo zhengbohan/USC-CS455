@@ -1,0 +1,69 @@
+Name: Nicole Fronda
+USC loginid: nfronda
+CSCI 455 Lab4
+Fall 2016
+
+1.1) Implementing a class one constructor and accessor method at a time, along with testing each new constructor and accessor, helps catch errors early and ensure each separate peice of the program is working as expected.
+
+2.1)
+nums.in numbers are 3 -7 10 17 9 -17  17 21 18 7
+expected result of minVal for nums.in is -17
+
+test1.in numbers are 900 -.5 -10   4 3 2 1
+expected results for minVal are 900
+
+test2.in numbers are 1 -1 2 -3   4 -4 5.5 5
+expected results for minVal are -4
+
+2.2)
+A non-empty Nums object that is full of non-integers will return the same value as an empty Nums object.  
+
+A non-empty object with only the Integer.MAX_VALUE in it will return the same value as an empty Nums object.  
+
+3.1)
+For nums.in:
+testFilter(nums, 10) will return values (17 17 21 18)
+testFilter(nums, -20) will return values (3 -7 10 17 9 -17 21 18 7)
+testFilter(nums, -17) will return values (3 -7 10 17 9, 21 18 7)
+testFilter(nums, 21) will return ()
+
+For test1.in 
+testFilter(nums, 10) will return values (900)
+testFilter(nums, -20) will return values (900)
+testFilter(nums, -17) will return values (900)
+testFilter(nums, 21) will return (900)
+
+For test2.in
+testFilter(nums, 10) will return values ()
+testFilter(nums, -20) will return values (1 -1 2 -3 4 -4)
+testFilter(nums, -17) will return values (1 -1 2 -3 4 -4)
+testFilter(nums, 21) will return ()
+
+**What are static methods?** Static methods belong to a class but do not require the instance variables of the class to execute its statements.  Therefore, an object of that that class does not have to be created before using a static method of that class.
+
+4.1) Entering a non-integer such as a double 1.0 or a string will signal that there are no more integers to read.
+
+4.2) (nums.valuesGT(threshold)).printVals();
+
+4.3) It is a Nums object
+
+4.4)
+```
+Nums newNums = nums.valuesGT(threshold);
+newNums.printVals();
+```
+
+4.5) A disadvantage of using an ArrayList instead of an Array is that accessing items in an ArrayList is slower than accessing items in an Array.  Computations over very large Nums objects will be a lot slower with an ArrayList.
+
+4.6) An advantage of using an ArrayList instead of an Array is that Arrays would be immutable, and new arrays would have to be created when calling add to append values to the Nums object.  Values can be easily appended to the ArrayList.
+
+4.7)
+1. 	No we do not need to save the numbers.  We can just print them as we read them.
+2. We only need to save the minimum value of the sequence.  If we come across a new minimum value, we can overwrite the old minimum, but there is no need to store any other values that are not the minimum value.
+3. If the order of printing out the intermediate sequence of numbers does matter, then we only need to save the minimum value of the sequence for the same reasons noted in 2. 
+4. We only need to save the threshold value as this is the value we use to check if values being read need to be printed out.  There is no need to save values as they are being read.
+5. We would need to save the input data to produce the output by NumTester, but we do not need to save any other data.
+
+
+
+
